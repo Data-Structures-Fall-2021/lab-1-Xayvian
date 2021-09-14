@@ -1,3 +1,5 @@
+package src.main.java;
+
 public class Lab01 {
 	public static void main(String[] args) {
 		// part 1
@@ -49,7 +51,7 @@ public class Lab01 {
 
 		// part 2
 		System.out.println("\n*** Part 2 ***");
-		int numIterations = 10;
+		int numIterations = 13;
 		System.out.printf("e^1 = %.8f\n", TaylorSeries.approximateExp(1, numIterations));
 		System.out.printf("e^2 = %.8f\n", TaylorSeries.approximateExp(2, numIterations));
 	}
