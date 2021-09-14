@@ -62,14 +62,22 @@ public class Battle {
         }
         return damage;
     }
+    public float getMonster1HP(){
+        return monster1HP;
+
+    }
+
+    public float getMonster2HP(){
+        return monster2HP;
+    }
     
     public void simulateRound(){
         System.out.printf(
                 "\nRound %d\n%s does %.2f points of damage to %s\n%s does "
                 + "%.2f points of damage to %s\n%s: %.2f\n%s: %.2f\n", round_num, getMonster1Name(),
-                damageDealt(getMonster2Name(), monster1Attack, monster2Defense, monster2HP),
-                getMonster2Name(), getMonster2Name(), damageDealt(getMonster1Name(), monster2Attack, monster1Defense, monster1HP),
-                getMonster1Name(), getMonster1Name(), monster1HP, getMonster2Name(), monster2HP);
+                damageDealt(getMonster2Name(), monster1Attack, monster2Defense, getMonster2HP()),
+                getMonster2Name(), getMonster2Name(), damageDealt(getMonster1Name(), monster2Attack, monster1Defense, getMonster1HP()),
+                getMonster1Name(), getMonster1Name(), getMonster1HP(), getMonster2Name(), getMonster2HP());
         round_num++;
         
     }
